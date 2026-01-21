@@ -105,9 +105,18 @@
 - [Fujifilm X100VI — официальная страница](https://fujifilm-x.com/products/cameras/x100vi/)
 - [Руководство пользователя X100VI (English)](https://fujifilm-dsc.com/en/manual/x100vi/)
 
-### 7 лучших Recipes для Fujifilm X100VI
+### Гайды
 
-📖 **[Руководство по рецептам для X100VI](recipes-guide-x100vi.md)** — 7 готовых рецептов для использования.
+| Файл | Описание |
+|------|----------|
+| 🌏 [Настройка для тревел-фотографии](guides/travel-setup-guide.md) | Полные настройки X100VI для путешествий |
+
+### Рецепты (Film Simulation Recipes)
+
+| Файл | Описание |
+|------|----------|
+| 📖 [Рецепты v1](recipes/recipes-guide-x100vi.md) | 7 классических рецептов: Portra, Gold, Kodachrome и др. |
+| 📖 [Рецепты v2](recipes/recipes-guide-x100vi-v2.md) | 7 универсальных рецептов: день/ночь, город, помещения |
 
 ---
 
