@@ -1,0 +1,24 @@
+{
+  // Включить форматирование при сохранении
+  "editor.formatOnSave": true,
+  
+  // Настройки специфичные для Markdown
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    }
+  },
+  
+  // Prettier как форматтер по умолчанию
+  "prettier.proseWrap": "always",
+  "prettier.printWidth": 80,
+  
+  // Настройки для Markdown
+  "markdown.extension.toc.levels": "2..6",
+  "markdown.extension.orderedList.marker": "ordered"
+}
