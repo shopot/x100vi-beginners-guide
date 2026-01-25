@@ -1,0 +1,77 @@
+// Цвета для светлой темы
+$colors-light: (
+  'bg-primary': #ffffff,
+  'bg-secondary': #fafafa,
+  'bg-tertiary': #f5f5f5,
+  'text-primary': #0f1419,
+  'text-secondary': #2c2c2c,
+  'text-tertiary': #4a4a4a,
+  'accent': #e07a5f,
+  'accent-hover': #c85a3a,
+  'border': #e0e0e0,
+  'border-dark': #d0d0d0,
+  'nav-bg': #0f1419,
+  'nav-text': #ffffff,
+  'code-bg': #f8f8f8,
+  'code-text': #0f1419,
+  'pre-bg': #0f1419,
+  'pre-text': #ffffff,
+  'table-header-bg': #f5f5f5,
+  'table-row-bg': #fafafa,
+  'shadow': rgba(15, 20, 25, 0.1),
+  'shadow-hover': rgba(15, 20, 25, 0.15),
+);
+
+// Цвета для темной темы
+$colors-dark: (
+  'bg-primary': #1e2329,
+  'bg-secondary': #252a32,
+  'bg-tertiary': #2d323a,
+  'text-primary': #e5e5e5,
+  'text-secondary': #d0d0d0,
+  'text-tertiary': #a0a0a0,
+  'accent': #ff8c42,
+  'accent-hover': #ff6b1a,
+  'border': #3a3f47,
+  'border-dark': #454a52,
+  'nav-bg': #1a1f26,
+  'nav-text': #e8e8e8,
+  'code-bg': #252a32,
+  'code-text': #e5e5e5,
+  'pre-bg': #252a32,
+  'pre-text': #e5e5e5,
+  'table-header-bg': #252a32,
+  'table-row-bg': #1e2329,
+  'shadow': rgba(0, 0, 0, 0.3),
+  'shadow-hover': rgba(0, 0, 0, 0.4),
+);
+
+// CSS переменные для светлой темы
+:root {
+  @each $name, $value in $colors-light {
+    --#{$name}: #{$value};
+  }
+}
+
+// CSS переменные для темной темы
+[data-theme='dark'] {
+  @each $name, $value in $colors-dark {
+    --#{$name}: #{$value};
+  }
+}
+
+// Размеры
+$breakpoint-mobile: 768px;
+$container-max-width: 1200px;
+$content-max-width: 900px;
+
+// Отступы
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+
+// Переходы
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;

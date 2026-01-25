@@ -1,0 +1,39 @@
+@use './variables' as *;
+
+// Миксин для медиа-запросов
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+// Миксин для плавных переходов
+@mixin transition($properties...) {
+  transition: $properties;
+}
+
+// Миксин для hover эффектов
+@mixin hover-lift {
+  transition: transform $transition-normal, box-shadow $transition-normal;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px var(--shadow-hover);
+  }
+}
+
+// Миксин для кнопок
+@mixin button-base {
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all $transition-fast;
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

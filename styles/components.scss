@@ -1,0 +1,147 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+// Theme Toggle
+.theme-toggle {
+  @include button-base;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--nav-text);
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+  }
+  
+  &:active {
+    transform: scale(0.95);
+  }
+  
+  @include mobile {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+
+.theme-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+// Scroll to Top
+.scroll-to-top {
+  position: fixed;
+  bottom: $spacing-lg;
+  right: $spacing-lg;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--bg-primary);
+  border: 2px solid var(--accent);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px var(--shadow);
+  @include transition(all $transition-normal);
+  z-index: 1000;
+  opacity: 0;
+  animation: fadeIn $transition-normal forwards;
+  
+  &:hover {
+    transform: translateY(-4px);
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+    box-shadow: 0 6px 20px var(--shadow-hover);
+  }
+  
+  &:active {
+    transform: translateY(-2px);
+  }
+  
+  @include mobile {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+.scroll-icon {
+  display: block;
+  line-height: 1;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+// Table of Contents
+.table-of-contents {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: $spacing-md;
+  margin-bottom: $spacing-lg;
+  
+  h3 {
+    margin-top: 0;
+    margin-bottom: $spacing-sm;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: $spacing-xs;
+  }
+  
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    @include transition(color $transition-fast);
+    
+    &:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+    }
+  }
+}
+
+.toc-level-1 {
+  font-weight: 600;
+}
+
+.toc-level-2 {
+  padding-left: $spacing-sm;
+}
+
+.toc-level-3 {
+  padding-left: $spacing-lg;
+  font-size: 0.9em;
+}
+
+.toc-level-4 {
+  padding-left: 3rem;
+  font-size: 0.85em;
+}
+
+.toc-level-5,
+.toc-level-6 {
+  padding-left: 4rem;
+  font-size: 0.8em;
+}
