@@ -29,19 +29,21 @@ export default function MarkdownPage({
         .back-link {
           display: inline-block;
           margin-bottom: 2rem;
-          color: #0066cc;
+          color: var(--accent);
           text-decoration: none;
           font-weight: 500;
+          transition: color 0.2s ease;
         }
 
         .back-link:hover {
+          color: var(--accent-hover);
           text-decoration: underline;
         }
 
         .navigation {
           margin-top: 3rem;
           padding-top: 2rem;
-          border-top: 1px solid #eee;
+          border-top: 1px solid var(--border);
         }
 
         :global(article h1),
