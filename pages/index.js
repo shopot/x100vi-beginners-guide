@@ -8,9 +8,9 @@ import { getFileData } from '../lib/files'
 
 export default function Home({ lessons, guides, recipes }) {
   return (
-    <Layout title="📷 Курс «Основы фотографии с Fujifilm X100VI»">
+    <Layout title="📷 Основы фотографии с Fujifilm X100VI">
       <div className="container">
-        <h1>📷 Курс «Основы фотографии с Fujifilm X100VI»</h1>
+        <h1>📷 Основы фотографии с Fujifilm X100VI</h1>
 
         <blockquote>
           Полный курс для начинающих фотографов, которые только что приобрели
@@ -142,9 +142,7 @@ export async function getStaticProps() {
   }
 
   const lessons = await Promise.all(
-    getMarkdownFiles(lessonsDir).map((file) =>
-      getFilePreview('lessons', file)
-    )
+    getMarkdownFiles(lessonsDir).map((file) => getFilePreview('lessons', file))
   )
   const guides = await Promise.all(
     getMarkdownFiles(guidesDir).map((file) => getFilePreview('guides', file))
