@@ -8,7 +8,7 @@ import { getFileData } from '../lib/files'
 
 export default function Home({ lessons, guides, recipes }) {
   return (
-    <Layout title="📷 Основы фотографии с Fujifilm X100VI">
+    <Layout title="Основы фотографии с Fujifilm X100VI">
       <div className="container">
         <h1>📷 Основы фотографии с Fujifilm X100VI</h1>
 
